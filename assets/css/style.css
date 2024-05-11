@@ -20,6 +20,7 @@
    * colors
    */
 
+  --safety-blue : #213b53;
   --safety-orange: hsl(25, 100%, 50%);
   --lavender-gray: hsl(230, 19%, 81%);
   --persian-rose: hsl(328, 100%, 59%);
@@ -40,7 +41,7 @@
    * gradient color
    */
 
-  --gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+  --gradient: linear-gradient(to left top, var(--black), var(--safety-blue));
 
   /**
    * typography
@@ -248,9 +249,21 @@ body {
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
+.header-small {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 10px;
+  border-block-end: 1px solid var(--cultured);
+  z-index: 4;
+  background-color: #213b53;
+  color: white;
+  transition: var(--transition-1);
+}
 
 .header {
-  position: fixed;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -261,12 +274,64 @@ body {
   transition: var(--transition-1);
 }
 
+.header-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
 .header.active { filter: drop-shadow(var(--shadow-2)); }
 
-.header > .container {
+.header-small  > .container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.header-small  > .container > .links {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.header  > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.list-style-one {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 0;
+}
+
+.list-style-one li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.list-style-one li i {
+  position: relative;
+  top: 2px;
+  color: var(--theme-color1);
+  margin-right: 10px;
+}
+
+.social-icon-one {
+  position: relative;
+  display: flex;
+}
+
+.social-icon-one li {
+  position: relative;
+  margin-left: 27px;
 }
 
 .logo {
@@ -508,8 +573,9 @@ body {
 
 .about-item:not(:last-child) { margin-block-end: 12px; }
 
-
-
+.about-mission-item {
+  list-style:var(--black_5);
+}
 
 
 /*-----------------------------------*\

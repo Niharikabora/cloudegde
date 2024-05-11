@@ -56,3 +56,13 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 140) {
+    header.classList.add("header-fixed");
+
+  } else {
+    header.classList.remove("header-fixed");
+
+  }
+});

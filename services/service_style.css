@@ -1,0 +1,16 @@
+.individual-serivce { background-color: var(--white-2); }
+
+.individual-serivce :is(.section-title, .section-text) { text-align: left; }
+
+.individual-serivce .section-title { margin-block-end: 5px; }
+
+.individual-serivce .section-text:not(:last-child) { margin-block-end: 18px; }
+
+.individual-serivce .h3 { margin-block-end: 8px; }
+
+.individual-serivce .section-text {
+    max-width: unset;
+    margin-inline: 0;
+}
+
+.individual-serivce .container { gap: 60px; }

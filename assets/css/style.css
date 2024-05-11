@@ -648,8 +648,11 @@ body {
 .blog-card .card-title:is(:hover, :focus) { color: var(--red-crayola); }
 
 
+/*-----------------------------------*\
+  #CLIENTS
+\*-----------------------------------*/
 
-
+.clients { background-color: var(--white-2); }
 
 /*-----------------------------------*\
   #CONTACT
